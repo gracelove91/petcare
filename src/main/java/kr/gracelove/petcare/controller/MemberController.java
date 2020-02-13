@@ -8,6 +8,9 @@ import kr.gracelove.petcare.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @RestController
 public class MemberController {
@@ -28,6 +31,12 @@ public class MemberController {
     public MemberResponseDto getMember(@PathVariable("memberId") Long memberId) {
         Member findMember = memberService.getMember(memberId);
         return new MemberResponseDto(findMember);
+    }
+
+    @GetMapping("/api/v1/members")
+    public List<MemberResponseDto> getMembers() {
+        List<Member> members = memberService.getMembers();
+        return members.stream().map(MemberResponseDto::new).collect(Collectors.toList());
     }
 
 }

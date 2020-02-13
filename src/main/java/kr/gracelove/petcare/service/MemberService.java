@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 @Transactional
@@ -25,5 +27,9 @@ public class MemberService {
 
     public Member getMember(Long memberId) {
         return memberRepository.findById(memberId).orElseThrow(() -> new IllegalStateException("존재하지않는 사용자입니다."));
+    }
+
+    public List<Member> getMembers() {
+        return memberRepository.findAll();
     }
 }
