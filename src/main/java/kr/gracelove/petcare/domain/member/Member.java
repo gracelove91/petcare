@@ -34,13 +34,18 @@ public class Member extends BaseTimeEntity {
     @OneToMany(mappedBy = "owner")
     private List<Pet> pets = new ArrayList<>();
 
+    @Enumerated(EnumType.STRING)
+    @ElementCollection
+    private List<MemberRoles> roles = new ArrayList<>();
+
     @Builder
-    public Member(Address address, String loginId, String password, String email, String phoneNumber) {
+    public Member(Address address, String loginId, String password, String email, String phoneNumber, List<MemberRoles> roles) {
         this.address = address;
         this.password = password;
         this.loginId = loginId;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.roles = roles;
     }
 
     public void updateMember(Member member) {
