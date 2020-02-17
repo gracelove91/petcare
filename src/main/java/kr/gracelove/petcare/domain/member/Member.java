@@ -1,7 +1,8 @@
-package kr.gracelove.petcare.entity;
+package kr.gracelove.petcare.domain.member;
 
-import kr.gracelove.petcare.entity.common.Address;
-import kr.gracelove.petcare.entity.common.BaseTimeEntity;
+import kr.gracelove.petcare.domain.pet.Pet;
+import kr.gracelove.petcare.domain.common.Address;
+import kr.gracelove.petcare.domain.common.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -46,5 +47,17 @@ public class Member extends BaseTimeEntity {
         this.email = member.getEmail();
         this.address = member.getAddress();
         this.phoneNumber = member.phoneNumber;
+    }
+
+    public void addPet(Pet pet) {
+        this.pets.add(pet);
+    }
+
+    public void removePet(Pet pet) {
+        this.pets.remove(pet);
+    }
+
+    public void passwordEncode(String encodedPassword) {
+        this.password = encodedPassword;
     }
 }

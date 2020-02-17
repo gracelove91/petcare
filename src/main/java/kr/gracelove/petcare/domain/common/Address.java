@@ -1,6 +1,4 @@
-package kr.gracelove.petcare.entity.common;
-
-import lombok.Getter;
+package kr.gracelove.petcare.domain.common;
 
 import javax.persistence.Embeddable;
 

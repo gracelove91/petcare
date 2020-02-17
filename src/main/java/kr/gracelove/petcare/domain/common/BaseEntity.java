@@ -1,4 +1,4 @@
-package kr.gracelove.petcare.entity.common;
+package kr.gracelove.petcare.domain.common;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedBy;

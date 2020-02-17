@@ -1,14 +1,14 @@
 package kr.gracelove.petcare;
 
-import kr.gracelove.petcare.entity.Clinic;
-import kr.gracelove.petcare.entity.Member;
-import kr.gracelove.petcare.entity.Pet;
-import kr.gracelove.petcare.entity.Reservation;
-import kr.gracelove.petcare.entity.common.Address;
-import kr.gracelove.petcare.repository.ClinicRepository;
-import kr.gracelove.petcare.repository.MemberRepository;
-import kr.gracelove.petcare.repository.PetRepository;
-import kr.gracelove.petcare.repository.ReservationRepository;
+import kr.gracelove.petcare.domain.clinic.Clinic;
+import kr.gracelove.petcare.domain.member.Member;
+import kr.gracelove.petcare.domain.pet.Pet;
+import kr.gracelove.petcare.domain.reservation.Reservation;
+import kr.gracelove.petcare.domain.common.Address;
+import kr.gracelove.petcare.domain.clinic.ClinicRepository;
+import kr.gracelove.petcare.domain.member.MemberRepository;
+import kr.gracelove.petcare.domain.pet.PetRepository;
+import kr.gracelove.petcare.domain.reservation.ReservationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

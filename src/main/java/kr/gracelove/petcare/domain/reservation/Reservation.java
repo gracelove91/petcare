@@ -1,6 +1,8 @@
-package kr.gracelove.petcare.entity;
+package kr.gracelove.petcare.domain.reservation;
 
-import kr.gracelove.petcare.entity.common.BaseEntity;
+import kr.gracelove.petcare.domain.clinic.Clinic;
+import kr.gracelove.petcare.domain.common.BaseEntity;
+import kr.gracelove.petcare.domain.pet.Pet;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;

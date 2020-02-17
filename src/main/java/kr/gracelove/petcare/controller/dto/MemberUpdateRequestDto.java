@@ -1,7 +1,7 @@
 package kr.gracelove.petcare.controller.dto;
 
-import kr.gracelove.petcare.entity.Member;
-import kr.gracelove.petcare.entity.common.Address;
+import kr.gracelove.petcare.domain.member.Member;
+import kr.gracelove.petcare.domain.common.Address;
 import lombok.Getter;
 
 @Getter
