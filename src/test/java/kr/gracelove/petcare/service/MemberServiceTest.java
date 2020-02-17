@@ -25,6 +25,14 @@ class MemberServiceTest {
                 .loginId("govlmo91")
                 .password("1234")
                 .build();
+
         assertThrows(DuplicateLoginId.class, () -> memberService.join(member2));
     }
+
+    @Test
+    void member_not_found() {
+        assertThrows(MemberNotFoundException.class, () -> memberService.getMember(999L));
+    }
+
+
 }

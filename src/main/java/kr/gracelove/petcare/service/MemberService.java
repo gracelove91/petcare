@@ -28,14 +28,14 @@ public class MemberService {
     }
 
     public Long update(Long memberId, Member member) {
-        Member findMember = memberRepository.findById(memberId).orElseThrow(() -> new IllegalStateException("존재하지않는 사용자입니다."));
+        Member findMember = memberRepository.findById(memberId).orElseThrow(() -> new MemberNotFoundException("존재하지않는 사용자입니다."));
         findMember.updateMember(member);
         return findMember.getId();
     }
 
     @Transactional(readOnly = true)
     public Member getMember(Long memberId) {
-        return memberRepository.findById(memberId).orElseThrow(() -> new IllegalStateException("존재하지않는 사용자입니다."));
+        return memberRepository.findById(memberId).orElseThrow(() -> new MemberNotFoundException("존재하지않는 사용자입니다."));
     }
 
     @Transactional(readOnly = true)
